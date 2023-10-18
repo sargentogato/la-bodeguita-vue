@@ -16,6 +16,8 @@
         </a>
       </div>
     </div>
+
+    <!-- <img src="../../public/images/La-Bodeguita-del-sur-d1.jpg" alt="" /> -->
   </section>
 </template>
 
