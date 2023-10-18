@@ -1,0 +1,32 @@
+@import './font';
+
+//Fonts
+$title-fontFamily: 'lbds-font';
+$subtitle-fontFamily: 'lbds-sub';
+
+//Title && subtitles
+$title-size-mobile: 2.7rem;
+$title-size-lg: 3.5rem;
+$title-size-xl: 5rem;
+$subtitle-size-mobile: 1.8rem;
+$subtitle-size-tablet: 1.5rem;
+$subtitle-size-desktop: 2.7rem;
+
+//Colors
+$title-color: white;
+
+//Shadows
+$negative-value: -1px;
+$postive-value: 1px;
+$text-shadow: 1px 1px 1px rgb(0, 0, 0, 0.5), -1px -1px 1px rgb(0, 0, 0, 0.5),
+  1px 1px 1px rgb(0, 0, 0);
+$tex-shadow-secondary: 1px 1px 1px white, -1px -1px 1px rgb(0, 0, 0), 1px 1px 1px rgb(255, 255, 255),
+  1px 1px 1px rgb(0, 0, 0);
+
+//Paddings
+$pad-imageBoxes: 10px 20px;
+
+//Media Querie Landscape
+$iphones-min-lanscape: 812px;
+$iphone-xr: 896px;
+$galaxy-s20-ultra: 913px;
