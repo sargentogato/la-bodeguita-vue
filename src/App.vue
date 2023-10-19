@@ -15,20 +15,20 @@ const imageText = ref([
   {
     lineOne: "Catering",
     lineTwo: "spagnolo",
-    mobile: "../../public/images/La-Bodeguita-del-sur-m1.jpg",
-    desktop: "../../public/images/La-Bodeguita-del-sur-d1.jpg",
+    mobile: "/images/La-Bodeguita-del-sur-m1.jpg",
+    desktop: "/images/La-Bodeguita-del-sur-d1.jpg",
   },
   {
     lineOne: "Cooking",
     lineTwo: "class",
-    mobile: "../../public/images/La-Bodeguita-del-sur-m2.jpg",
-    desktop: "../../public/images/La-Bodeguita-del-sur-d2.jpg",
+    mobile: "/images/La-Bodeguita-del-sur-m2.jpg",
+    desktop: "/images/La-Bodeguita-del-sur-d2.jpg",
   },
   {
     lineOne: "Corsi di",
     lineTwo: "spagnolo",
-    mobile: "../../public/images/La-Bodeguita-del-sur-m3.jpg",
-    desktop: "../../public/images/La-Bodeguita-del-sur-d3.jpg",
+    mobile: "/images/La-Bodeguita-del-sur-m3.jpg",
+    desktop: "/images/La-Bodeguita-del-sur-d3.jpg",
   },
 ])
 </script>
