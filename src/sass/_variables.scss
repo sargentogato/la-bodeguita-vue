@@ -1,8 +1,6 @@
-@import './font';
-
 //Fonts
-$title-fontFamily: 'lbds-font';
-$subtitle-fontFamily: 'lbds-sub';
+$title-fontFamily: "lbds-font";
+$subtitle-fontFamily: "lbds-sub";
 
 //Title && subtitles
 $title-size-mobile: 2.7rem;
@@ -20,8 +18,8 @@ $negative-value: -1px;
 $postive-value: 1px;
 $text-shadow: 1px 1px 1px rgb(0, 0, 0, 0.5), -1px -1px 1px rgb(0, 0, 0, 0.5),
   1px 1px 1px rgb(0, 0, 0);
-$tex-shadow-secondary: 1px 1px 1px white, -1px -1px 1px rgb(0, 0, 0), 1px 1px 1px rgb(255, 255, 255),
-  1px 1px 1px rgb(0, 0, 0);
+$tex-shadow-secondary: 1px 1px 1px white, -1px -1px 1px rgb(0, 0, 0),
+  1px 1px 1px rgb(255, 255, 255), 1px 1px 1px rgb(0, 0, 0);
 
 //Paddings
 $pad-imageBoxes: 10px 20px;

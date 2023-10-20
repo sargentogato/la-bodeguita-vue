@@ -5,6 +5,7 @@ import vue from "@vitejs/plugin-vue"
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: "",
   plugins: [vue()],
   resolve: {
     alias: {
@@ -16,6 +17,7 @@ export default defineConfig({
       scss: {
         additionalData: `
 				@import "@/sass/_variables";
+        @import "@/sass/_font";
 				`,
       },
     },
