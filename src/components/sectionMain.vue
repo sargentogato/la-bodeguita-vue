@@ -24,8 +24,10 @@
 <script setup>
 const props = defineProps(["imageText"])
 
-function getImage(url) {
-  return new URL(`${url}`, import.meta.url).href
+function getImage(image) {
+  const path = new URL("../../public/images", import.meta.url).href
+
+  return `${path}/${image}`
 }
 </script>
 
