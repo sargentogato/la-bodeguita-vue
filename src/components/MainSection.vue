@@ -1,6 +1,10 @@
 <template>
   <section class="row">
-    <div class="imageBox col-12 col-md-4" v-for="imageText in props.imageText">
+    <div
+      class="imageBox col-12 col-md-4"
+      :class="imageText.lineOne"
+      v-for="imageText in props.imageText"
+    >
       <picture class="imageBox__picture">
         <source
           media="(min-width:768px)"
@@ -9,25 +13,28 @@
         <source media="(min-width:0px)" :srcset="getImage(imageText.mobile)" />
         <img :src="getImage(imageText.desktop)" alt="" />
       </picture>
-      <div class="imageBox__text-container">
-        <a href="https://aluna.uk.com/" class="imageBox__link">
+      <div class="imageBox__text-container" :class="imageText.lineOne">
+        <a @click="addModal(imageText.lineOne)" class="imageBox__link">
           <p class="imageBox__text mb-0">{{ imageText.lineOne }}</p>
           <p class="imageBox__text mb-0">{{ imageText.lineTwo }}</p>
         </a>
       </div>
     </div>
-
-    <!-- <img src="../../public/images/La-Bodeguita-del-sur-d1.jpg" alt="" /> -->
   </section>
 </template>
 
 <script setup>
 const props = defineProps(["imageText"])
+const emit = defineEmits(["addModal"])
 
 function getImage(image) {
   const path = new URL("../../public/images", import.meta.url).href
 
   return `${path}/${image}`
+}
+
+function addModal(event) {
+  emit("addModal", event)
 }
 </script>
 
@@ -46,11 +53,11 @@ section {
 }
 
 .imageBox {
-  position: relative;
-  height: 360px;
-  display: flex;
-  justify-content: center;
   align-items: center;
+  display: flex;
+  height: 360px;
+  justify-content: center;
+  position: relative;
 
   img {
     object-fit: cover;
@@ -79,6 +86,38 @@ section {
   }
 }
 
+/** Animation when the page loads - Place all elements on the viewport */
+//Catering
+@keyframes catering {
+  from {
+    transform: translateX(-100%);
+  }
+}
+.row .Catering {
+  animation: catering $time-animation;
+}
+
+// Cooking 2
+@keyframes cooking {
+  from {
+    transform: translateY(100%);
+  }
+}
+.row .Cooking {
+  animation: cooking $time-animation;
+}
+
+//Corsi 3
+@keyframes corsi {
+  from {
+    transform: translateY(-100%);
+  }
+}
+.row .Corsi {
+  animation: corsi $time-animation;
+}
+
+//Media Queries
 @media (width > 767px) {
   .row {
     overflow-x: hidden;

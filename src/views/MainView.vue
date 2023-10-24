@@ -1,36 +1,41 @@
 <template>
   <div class="container-fluid">
     <HeaderMain />
-    <SectionMain :imageText="imageText" />
+    <SectionMain :imageText="imageText" @addModal="openModal($event)" />
+    <Modal :show="showModal" @closeModal="showModal = false">
+      <template #content>
+        <Catering v-if="infoToShow === 'Catering'" />
+        <Cooking v-if="infoToShow === 'Cooking'" />
+        <Corsi v-if="infoToShow === 'Corsi di'" />
+      </template>
+    </Modal>
   </div>
 </template>
 
 <script setup>
 import HeaderMain from "../components/MainHeader.vue"
 import SectionMain from "../components/MainSection.vue"
+import Modal from "../components/Modal.vue"
+import Catering from "../components/Catering.vue"
+import Cooking from "../components/Cooking.vue"
+import Corsi from "../components/Corsi.vue"
+import { imageText } from "../info/info.js"
 
 import { ref } from "vue"
 
-const imageText = ref([
-  {
-    lineOne: "Catering",
-    lineTwo: "spagnolo",
-    mobile: "La_Bodeguita_del_sur_m1.jpg",
-    desktop: "La_Bodeguita_del_sur_d1.jpg",
-  },
-  {
-    lineOne: "Cooking",
-    lineTwo: "class",
-    mobile: "La_Bodeguita_del_sur_m2.jpg",
-    desktop: "La_Bodeguita_del_sur_d2.jpg",
-  },
-  {
-    lineOne: "Corsi di",
-    lineTwo: "spagnolo",
-    mobile: "La_Bodeguita_del_sur_m3.jpg",
-    desktop: "La_Bodeguita_del_sur_d3.jpg",
-  },
-])
+let showModal = ref(false)
+let infoToShow = ref()
+
+function openModal(event) {
+  infoToShow = event
+  showModal.value = true
+}
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.container-fluid {
+  overflow: hidden;
+  padding-left: 0;
+  padding-right: 0;
+}
+</style>
