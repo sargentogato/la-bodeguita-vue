@@ -123,17 +123,13 @@ section {
     overflow-x: hidden;
 
     .imageBox:last-child img {
-      width: fit-content;
+      transform: translateX(1%);
     }
   }
 
   .imageBox {
     &__text {
       font-size: $subtitle-size-tablet;
-    }
-
-    &__link {
-      transform: translateX(-20%);
     }
   }
 
@@ -150,6 +146,9 @@ section {
       clip-path: polygon(100px 0, 100% 0, calc(100% - 100px) 100%, 0 100%);
     }
   }
+  .imageBox:first-child img {
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+  }
 }
 
 @media (min-height: 400px) and (max-height: 450px) and (min-width: 768px) and (max-width: 915px) {
@@ -161,7 +160,7 @@ section {
     transform: translateX(15%);
   }
   .imageBox:last-child img {
-    transform: translateX(5%);
+    transform: translateX(10%);
     clip-path: polygon(25% 0, 100% 0%, 100% 100%, 0 100%);
   }
 }
@@ -222,7 +221,14 @@ section {
       width: 180%;
     }
   }
+
+  .imageBox {
+    &__link {
+      transform: translateX(-15%);
+    }
+  }
 }
+
 @media (width > $galaxy-s20-ultra) {
   .row {
     .imageBox:last-child img {
