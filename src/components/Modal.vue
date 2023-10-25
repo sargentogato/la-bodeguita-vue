@@ -34,7 +34,6 @@ function closeModal() {
 .modalBox {
   background-color: white;
   width: fit-content;
-  // height: fit-content;
   max-width: 95%;
   padding: 25px;
   position: relative;
