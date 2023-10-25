@@ -132,7 +132,7 @@ section {
       font-size: $subtitle-size-tablet;
     }
 
-    &__text-container {
+    &__link {
       transform: translateX(-20%);
     }
   }
