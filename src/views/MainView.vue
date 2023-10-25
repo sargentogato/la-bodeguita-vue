@@ -2,13 +2,15 @@
   <div class="container-fluid">
     <HeaderMain />
     <SectionMain :imageText="imageText" @addModal="openModal($event)" />
-    <Modal :show="showModal" @closeModal="showModal = false">
-      <template #content>
-        <Catering v-if="infoToShow === 'Catering'" />
-        <Cooking v-if="infoToShow === 'Cooking'" />
-        <Corsi v-if="infoToShow === 'Corsi di'" />
-      </template>
-    </Modal>
+    <Teleport to="#modal">
+      <Modal :show="showModal" @close="showModal = false">
+        <template #content>
+          <Catering v-if="infoToShow === 'Catering'" />
+          <Cooking v-if="infoToShow === 'Cooking'" />
+          <Corsi v-if="infoToShow === 'Corsi di'" />
+        </template>
+      </Modal>
+    </Teleport>
   </div>
 </template>
 
