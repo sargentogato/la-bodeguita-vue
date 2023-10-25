@@ -152,6 +152,20 @@ section {
   }
 }
 
+@media (min-height: 400px) and (max-height: 450px) and (min-width: 768px) and (max-width: 915px) {
+  .imageBox:first-child img {
+    transform: translateX(15%);
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+  }
+  .imageBox:nth-child(2) img {
+    transform: translateX(15%);
+  }
+  .imageBox:last-child img {
+    transform: translateX(5%);
+    clip-path: polygon(25% 0, 100% 0%, 100% 100%, 0 100%);
+  }
+}
+
 @media (width > 1130px) {
   .row {
     .imageBox:last-child img {
