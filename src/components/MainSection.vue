@@ -13,12 +13,15 @@
         <source media="(min-width:0px)" :srcset="getImage(imageText.mobile)" />
         <img :src="getImage(imageText.desktop)" alt="" />
       </picture>
-      <div class="imageBox__text-container" :class="imageText.lineOne">
-        <a @click="addModal(imageText.lineOne)" class="imageBox__link">
-          <p class="imageBox__text mb-0">{{ imageText.lineOne }}</p>
-          <p class="imageBox__text mb-0">{{ imageText.lineTwo }}</p>
-        </a>
-      </div>
+
+      <a
+        @click="addModal(imageText.lineOne)"
+        class="imageBox__link"
+        :class="imageText.lineOne"
+      >
+        <p class="imageBox__text mb-0">{{ imageText.lineOne }}</p>
+        <p class="imageBox__text mb-0">{{ imageText.lineTwo }}</p>
+      </a>
     </div>
   </section>
 </template>
@@ -60,22 +63,19 @@ section {
   position: relative;
 
   img {
-    object-fit: cover;
     height: 360px;
     filter: brightness(50%);
+    object-fit: cover;
   }
 
-  &__text-container {
+  &__link {
     border: 3px solid rgb(255, 255, 255);
+    color: white;
+    letter-spacing: 0.2em;
     position: absolute;
     padding: $pad-imageBoxes;
     text-align: center;
     z-index: 1;
-  }
-
-  &__link {
-    color: white;
-    letter-spacing: 0.2em;
   }
 
   &__text {

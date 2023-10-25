@@ -57,9 +57,11 @@ function closeModal() {
   }
 }
 
-.modal-enter-active,
+.modal-enter-active {
+  transition: opacity 800ms ease;
+}
 .modal-leave-active {
-  transition: all 800ms ease;
+  transition: opacity 200ms ease;
 }
 
 .modal-enter-from,
