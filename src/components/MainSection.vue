@@ -42,17 +42,44 @@ function addModal(event) {
 </script>
 
 <style lang="scss" scoped>
-//fixing Bootstrap
-.row > * {
-  padding: 0;
-}
-
 a {
   text-decoration: none;
 }
 
 section {
   height: 100vh;
+  // overflow: hidden;
+}
+
+.header {
+  position: absolute;
+  width: 100%;
+
+  &__title {
+    color: white;
+    font-size: $title-size-mobile;
+    font-family: $title-fontFamily;
+    text-align: center;
+    text-shadow: $text-shadow;
+    width: fit-content;
+    z-index: 1;
+  }
+}
+
+@media (width > 767px) {
+  .header {
+    &__title {
+      font-size: $title-size-lg;
+    }
+  }
+}
+
+@media (width > 1400px) {
+  .header {
+    &__title {
+      font-size: $title-size-xl;
+    }
+  }
 }
 
 .imageBox {
@@ -86,6 +113,59 @@ section {
   }
 }
 
+@media (width > 768px) {
+  .imageBox {
+    height: 100%;
+
+    picture,
+    img {
+      height: 100%;
+    }
+  }
+
+  .imageBox {
+    &:first-child img {
+      width: calc(100% + 50px);
+    }
+
+    &:nth-child(2) img {
+      width: calc(100% + 200px);
+      transform: translateX(-15%);
+      clip-path: polygon(70px 0, 100% 0, calc(100% - 100px) 100%, 0 100%);
+    }
+
+    &:last-child img {
+      width: calc(100% + 200px);
+      transform: translateX(-15%);
+      clip-path: polygon(75px 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    &:first-child &__link {
+      transform: translateX(-10%);
+    }
+
+    &:nth-child(2) &__link {
+      transform: translateX(-15%);
+    }
+
+    &:last-child &__link {
+      transform: translate(-10%);
+    }
+
+    &__text {
+      font-size: $subtitle-size-tablet;
+    }
+  }
+}
+
+@media (width > 1400px) {
+  .imageBox {
+    &:nth-child(2) &__link {
+      transform: translateX(-50%);
+    }
+  }
+}
+
 /** Animation when the page loads - Place all elements on the viewport */
 //Catering
 @keyframes catering {
@@ -115,126 +195,5 @@ section {
 }
 .row .Corsi {
   animation: corsi $time-animation;
-}
-
-//Media Queries
-@media (width > 767px) {
-  .row {
-    overflow-x: hidden;
-
-    .imageBox:last-child img {
-      transform: translateX(1%);
-    }
-  }
-
-  .imageBox {
-    &__text {
-      font-size: $subtitle-size-tablet;
-    }
-  }
-
-  .imageBox {
-    height: auto;
-
-    img {
-      width: 140%;
-      position: absolute;
-      top: 0;
-      left: -100px;
-      object-fit: cover;
-      height: 100vh;
-      clip-path: polygon(100px 0, 100% 0, calc(100% - 100px) 100%, 0 100%);
-    }
-  }
-  .imageBox:first-child img {
-    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
-  }
-}
-
-@media (min-height: 400px) and (max-height: 450px) and (min-width: 768px) and (max-width: 915px) {
-  .imageBox:first-child img {
-    transform: translateX(15%);
-    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
-  }
-  .imageBox:nth-child(2) img {
-    transform: translateX(15%);
-  }
-  .imageBox:last-child img {
-    transform: translateX(10%);
-    clip-path: polygon(25% 0, 100% 0%, 100% 100%, 0 100%);
-  }
-}
-
-@media (width > 1130px) {
-  .row {
-    .imageBox:last-child img {
-      transform: translateX(10%);
-    }
-  }
-}
-
-@media (min-width: 1131px) and (max-width: 1299px) {
-  .row {
-    .imageBox:last-child img {
-      transform: translateX(8.5%);
-      width: fit-content;
-    }
-  }
-}
-
-@media (min-width: 1300px) and (max-width: 1360px) {
-  .row {
-    .imageBox:last-child img {
-      transform: translateX(12%);
-      width: fit-content;
-    }
-  }
-}
-@media (min-width: 1361px) and (max-width: 1400px) {
-  .row {
-    .imageBox:last-child img {
-      transform: translateX(13%);
-      width: 130%;
-    }
-  }
-}
-
-@media (width > 1400px) {
-  .row {
-    .imageBox:last-child img {
-      width: 130%;
-    }
-  }
-
-  .imageBox {
-    &__text {
-      font-size: $subtitle-size-desktop;
-    }
-  }
-}
-
-//Media queries Devices
-//Landscape
-@media (min-width: $iphones-min-lanscape) and (max-width: $iphone-xr) {
-  .row {
-    .imageBox:last-child img {
-      width: 180%;
-    }
-  }
-
-  .imageBox {
-    &__link {
-      transform: translateX(-15%);
-    }
-  }
-}
-
-@media (width > $galaxy-s20-ultra) {
-  .row {
-    .imageBox:last-child img {
-      width: 160%;
-      transform: translateX(3.5%);
-    }
-  }
 }
 </style>

@@ -34,4 +34,14 @@ function openModal(event) {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.container-fluid {
+  padding: 0;
+}
+
+@media (width >767px) {
+  .container-fluid {
+    overflow: hidden;
+  }
+}
+</style>
