@@ -1,5 +1,5 @@
 <template>
-  <div class="header row d-flex justify-content-center">
+  <div class="header row d-flex">
     <h1 class="header__title col-12 text-center p-3">La Bodeguita del Sur</h1>
   </div>
 </template>
