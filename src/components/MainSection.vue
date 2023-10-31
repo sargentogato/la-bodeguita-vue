@@ -48,7 +48,6 @@ a {
 
 section {
   height: 100vh;
-  // overflow: hidden;
 }
 
 .header {
