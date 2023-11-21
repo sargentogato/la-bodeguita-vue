@@ -27,17 +27,17 @@
 </template>
 
 <script setup>
-const props = defineProps(["imageText"])
-const emit = defineEmits(["addModal"])
+const props = defineProps(["imageText"]);
+const emit = defineEmits(["addModal"]);
 
 function getImage(image) {
-  const path = new URL("../../public/images", import.meta.url).href
+  const path = new URL("../../public/images", import.meta.url).href;
 
-  return `${path}/${image}`
+  return `${path}/${image}`;
 }
 
 function addModal(event) {
-  emit("addModal", event)
+  emit("addModal", event);
 }
 </script>
 
