@@ -1,10 +1,14 @@
 <template>
   <div class="header row d-flex">
-    <h1 class="header__title col-12 text-center p-3">La Bodeguita del Sur</h1>
+    <h1 class="header__title col-12 text-center p-3">{{ title }}</h1>
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+defineProps({
+  title: String,
+});
+</script>
 
 <style lang="scss" scoped>
 .header {

@@ -1,6 +1,6 @@
 <template>
   <div class="container-fluid">
-    <HeaderMain />
+    <HeaderMain :title="title" />
     <SectionMain :imageText="imageText" @addModal="openModal($event)" />
     <Teleport to="#modal">
       <Modal :show="showModal" @close="showModal = false">
@@ -15,22 +15,23 @@
 </template>
 
 <script setup>
-import HeaderMain from "../components/MainHeader.vue"
-import SectionMain from "../components/MainSection.vue"
-import Modal from "../components/Modal.vue"
-import Catering from "../components/Catering.vue"
-import Cooking from "../components/Cooking.vue"
-import Corsi from "../components/Corsi.vue"
-import { imageText } from "../info/info.js"
+import HeaderMain from "../components/MainHeader.vue";
+import SectionMain from "../components/MainSection.vue";
+import Modal from "../components/Modal.vue";
+import Catering from "../components/Catering.vue";
+import Cooking from "../components/Cooking.vue";
+import Corsi from "../components/Corsi.vue";
+import { imageText } from "../info/info.js";
 
-import { ref } from "vue"
+import { ref } from "vue";
 
-let showModal = ref(false)
-let infoToShow = ref()
+let showModal = ref(false);
+let infoToShow = ref();
+let title = ref("La Bodeguita del Sur");
 
 function openModal(event) {
-  infoToShow = event
-  showModal.value = true
+  infoToShow = event;
+  showModal.value = true;
 }
 </script>
 
