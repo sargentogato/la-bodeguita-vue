@@ -50,37 +50,6 @@ section {
   height: 100vh;
 }
 
-.header {
-  position: absolute;
-  width: 100%;
-
-  &__title {
-    color: white;
-    font-size: $title-size-mobile;
-    font-family: $title-fontFamily;
-    text-align: center;
-    text-shadow: $text-shadow;
-    width: fit-content;
-    z-index: 1;
-  }
-}
-
-@media (width > 767px) {
-  .header {
-    &__title {
-      font-size: $title-size-lg;
-    }
-  }
-}
-
-@media (width > 1400px) {
-  .header {
-    &__title {
-      font-size: $title-size-xl;
-    }
-  }
-}
-
 .imageBox {
   align-items: center;
   display: flex;

@@ -12,12 +12,12 @@
 <script setup>
 defineProps({
   show: Boolean,
-})
+});
 
-const emit = defineEmits(["close"])
+const emit = defineEmits(["close"]);
 
 function closeModal() {
-  emit("close")
+  emit("close");
 }
 </script>
 
@@ -32,7 +32,7 @@ function closeModal() {
 }
 
 .modalBox {
-  background-color: white;
+  background-color: rgb(0, 0, 0);
   width: fit-content;
   max-width: 95%;
   padding: 25px;

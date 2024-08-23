@@ -1,7 +1,7 @@
 <template>
   <div class="container-fluid">
     <HeaderMain :title="title" />
-    <SectionMain :imageText="imageText" @addModal="openModal($event)" />
+    <SectionMain :imageText="data" @addModal="openModal($event)" />
     <Teleport to="#modal">
       <Modal :show="showModal" @close="showModal = false">
         <template #content>
@@ -21,11 +21,12 @@ import Modal from "../components/Modal.vue";
 import Catering from "../components/Catering.vue";
 import Cooking from "../components/Cooking.vue";
 import Corsi from "../components/Corsi.vue";
-import { imageText } from "../info/info.js";
-
+import info from "../info/info.json";
 import { ref } from "vue";
 
-let showModal = ref(false);
+const { data } = info;
+
+let showModal = ref();
 let infoToShow = ref();
 let title = ref("La Bodeguita del Sur");
 
