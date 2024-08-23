@@ -54,13 +54,15 @@
 <style lang="scss" scoped>
 .main-container {
   max-width: 1000px;
+  height: 100%;
+  /* background-color: rgb(255, 117, 67); */
 }
 
 .title,
 .subtitle,
 .menu,
 .paellas {
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
 .item {
