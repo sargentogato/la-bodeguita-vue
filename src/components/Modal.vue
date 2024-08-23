@@ -29,14 +29,16 @@ function closeModal() {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 .modalBox {
   background-color: rgb(0, 0, 0);
   width: fit-content;
-  max-width: 95%;
+  max-width: 90%;
   padding: 25px;
   position: relative;
+  top: 50px;
 }
 
 .modalBox__button {
