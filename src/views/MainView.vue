@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid m-0 p-0">
+  <div class="container-fluid">
     <HeaderMain :title="title" />
     <SectionMain :imageText="data" @addModal="openModal($event)" />
     <Teleport to="#modal">
@@ -38,8 +38,7 @@ function openModal(event) {
 
 <style lang="scss" scoped>
 .container-fluid {
-  padding: 0;
-  margin: 0;
+  overflow-x: auto;
 }
 
 @media (width >767px) {

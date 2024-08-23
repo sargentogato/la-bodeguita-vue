@@ -34,25 +34,26 @@ function closeModal() {
 
 .modalBox {
   background-color: rgb(0, 0, 0);
-  width: fit-content;
   max-width: 90%;
   padding: 25px;
   position: relative;
   top: 50px;
+  height: 100%;
+  overflow-y: scroll;
 }
 
 .modalBox__button {
   border: 1px solid rgb(141, 141, 141);
   position: absolute;
-  right: -10px;
-  top: -20px;
+  right: 1px;
+  top: 1px;
   width: $button-square;
   height: $button-square;
   border-radius: 50%;
   background-color: rgb(47, 145, 18);
   color: white;
   font-weight: bold;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
 
   &--close {
     display: none;
@@ -69,5 +70,13 @@ function closeModal() {
 .modal-enter-from,
 .modal-leave-to {
   opacity: 0;
+}
+
+@media (min-width: 520px) {
+  .modalBox {
+    height: fit-content;
+    top: 0;
+    max-width: 600px;
+  }
 }
 </style>

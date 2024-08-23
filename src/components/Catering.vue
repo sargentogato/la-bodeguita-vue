@@ -1,5 +1,5 @@
 <template>
-  <div class="main-container">
+  <div>
     <h1 class="title text-center">I nostri menù</h1>
     <h5 class="subtitle">
       !!!!!!Assaggiate i nostri menù completi: bevanda (sangrìa), antipasto,
@@ -52,12 +52,6 @@
 <script setup></script>
 
 <style lang="scss" scoped>
-.main-container {
-  max-width: 1000px;
-  height: 100%;
-  /* background-color: rgb(255, 117, 67); */
-}
-
 .title,
 .subtitle,
 .menu,
