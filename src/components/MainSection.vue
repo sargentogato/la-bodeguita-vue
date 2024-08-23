@@ -42,6 +42,11 @@ function addModal(event) {
 </script>
 
 <style lang="scss" scoped>
+[class*="col-"] {
+  margin: 0;
+  padding: 0;
+}
+
 a {
   text-decoration: none;
 }
