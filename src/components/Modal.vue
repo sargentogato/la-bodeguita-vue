@@ -40,17 +40,18 @@ function closeModal() {
   top: 50px;
   height: 100%;
   overflow-y: scroll;
+  overflow-y: hidden;
 }
 
 .modalBox__button {
-  border: 1px solid rgb(141, 141, 141);
+  border: 1px solid rgb(0, 0, 0);
   position: absolute;
   right: 1px;
   top: 1px;
   width: $button-square;
   height: $button-square;
   border-radius: 50%;
-  background-color: rgb(47, 145, 18);
+  background-color: transparent;
   color: white;
   font-weight: bold;
   font-size: 1.5rem;
